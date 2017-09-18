@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <poly2.h>
+#include "poly2.h"
 
 namespace Ui {
 class MainWindow;
