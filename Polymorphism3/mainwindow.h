@@ -16,14 +16,6 @@ public:
     explicit FooMainWindow(QWidget *parent = 0);
     ~FooMainWindow();
 
-//    void setterninTalk(QString x){ninjaTalk = x;}
-//    QString getterninTalk(){return ninjaTalk;}
-
-//    void settermonTalk(QString x){monsterTalk = x;}
-//    QString gettermonTalk(){return monsterTalk;}
-
-//    void talkShouter(QString x="default");
-
 private slots:
     void on_btnNinja_clicked();
 
@@ -37,8 +29,6 @@ private:
 
     QString sumString;
 
-//    QString ninjaTalk;// = "I am a Ninga, Ninja Chop! - ";
-//    QString monsterTalk;// = "I am a Monster, get in ma belleeeeh! - ";
 };
 
 #endif // MAINWINDOW_H
