@@ -4,16 +4,17 @@
 
 FooMainWindow::FooMainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
-//    ninjaObj(new Ninja),
-//    monsterObj(new Monster)
+    ui(new Ui::MainWindow),
+    // note can only use new bellow with pointer object
+    ninjaObj(new Ninja),
+    monsterObj(new Monster)
 {
     ui->setupUi(this);
-    Ninja n;
+    /* Ninja n;
     Monster m;
 
     poly2 *ninPtr = &n;
-    poly2 *monPtr = &m;
+    poly2 *monPtr = &m; */
 }
 
 FooMainWindow::~FooMainWindow()
@@ -27,6 +28,10 @@ FooMainWindow::~FooMainWindow()
 
 void FooMainWindow::on_btnNinja_clicked()
 {
+    ninjaObj->attack();
+    sumString = ninjaObj->getterninTalk() + ninjaObj->getterAttackPower();
+    ui->lineEdit->setText(sumString);
+
 //    ninjaObj.setAttackPower(25);
 
 

@@ -19,6 +19,7 @@ public:
     QString gettermonTalk(){return monsterTalk;}
 
     void setAttackPower(QString a);
+    QString getterAttackPower(){return attackPower;}
 
 //    void talkShouter(QString x);
 

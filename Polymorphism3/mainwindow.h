@@ -32,8 +32,10 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-//    poly2 ninjaObj;
-//    poly2 monsterObj;
+    Ninja *ninjaObj;
+    Monster *monsterObj;
+
+    QString sumString;
 
 //    QString ninjaTalk;// = "I am a Ninga, Ninja Chop! - ";
 //    QString monsterTalk;// = "I am a Monster, get in ma belleeeeh! - ";
