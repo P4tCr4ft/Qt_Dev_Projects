@@ -1,4 +1,7 @@
 #include "renderarea.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
 // looking at QMdiSubWindow
 #include <QMdiSubWindow>
 
@@ -23,7 +26,14 @@ QSize RenderArea::sizeHint() const{
 }
 
 void RenderArea::testLayout(){
-    QMdiSubWindow *testViewWindow = new QMdiSubWindow();
-    testViewWindow->;
+//    QMdiSubWindow *testViewWindow = new QMdiSubWindow();
+//    testViewWindow->
+
+//Ui::MainWindow *ui2;
+//MainWindow::setUiObj(ui2);
+
+//    QMdiArea mdiArea;
+//    QMdiSubWindow *subWindow1 = new QMdiSubWindow;
+
 
 }

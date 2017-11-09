@@ -14,10 +14,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QPushButton>
+#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,12 +25,9 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QMenuBar *menuBar;
+    QToolBar *mainToolBar;
     QWidget *centralWidget;
-    QWidget *renderArea;
-    QPushButton *btnTest;
-    QLineEdit *lineEdit1;
-    QLineEdit *lineEdit2;
-    QLineEdit *lineEdit3;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -38,23 +35,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(400, 300);
+        menuBar = new QMenuBar(MainWindow);
+        menuBar->setObjectName(QStringLiteral("menuBar"));
+        MainWindow->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(MainWindow);
+        mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
+        MainWindow->addToolBar(mainToolBar);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        renderArea = new QWidget(centralWidget);
-        renderArea->setObjectName(QStringLiteral("renderArea"));
-        renderArea->setGeometry(QRect(30, 10, 341, 251));
-        btnTest = new QPushButton(renderArea);
-        btnTest->setObjectName(QStringLiteral("btnTest"));
-        btnTest->setGeometry(QRect(10, 220, 75, 23));
-        lineEdit1 = new QLineEdit(renderArea);
-        lineEdit1->setObjectName(QStringLiteral("lineEdit1"));
-        lineEdit1->setGeometry(QRect(30, 40, 113, 20));
-        lineEdit2 = new QLineEdit(renderArea);
-        lineEdit2->setObjectName(QStringLiteral("lineEdit2"));
-        lineEdit2->setGeometry(QRect(90, 90, 113, 20));
-        lineEdit3 = new QLineEdit(renderArea);
-        lineEdit3->setObjectName(QStringLiteral("lineEdit3"));
-        lineEdit3->setGeometry(QRect(190, 140, 113, 20));
         MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
@@ -68,7 +56,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        btnTest->setText(QApplication::translate("MainWindow", "Test", Q_NULLPTR));
     } // retranslateUi
 
 };

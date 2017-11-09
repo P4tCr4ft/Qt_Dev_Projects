@@ -21,6 +21,10 @@ private slots:
 
     void on_btnMonster_clicked();
 
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_checkBox_clicked();
+
 private:
     Ui::MainWindow *ui;
 
