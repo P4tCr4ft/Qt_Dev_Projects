@@ -29,6 +29,7 @@ void ComboBoxDialog::on_pushButton_clicked()
 
 void ComboBoxDialog::on_comboBox_2_activated(const QString &arg1)
 {
+    // arg1 is Text of the item selected
     QMessageBox *resultBox = new QMessageBox;
     resultBox->setFixedWidth(100);
     resultBox->information(this, arg1, arg1);
