@@ -3,9 +3,12 @@
 
 FooWidget::FooWidget(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Widget)
-// ... I don't need to do it here using member syntax
-//    name("Stevo...")
+    ui(new Ui::Widget),
+// ... I could initialise it here using member syntax
+// if I wanted to ...
+    name("Stevo...")
+// or initialise it in function below, which would
+// re-assign name if initialised above ...
 {
     ui->setupUi(this);
 }
@@ -15,6 +18,13 @@ FooWidget::~FooWidget()
     delete ui;
 }
 
-void FooWidget::nameSetter(){
-    ui->lineEdit->setText(name);
+// note can just use name here without using nameGetter
+void FooWidget::nameSetter(QString &_name){
+    name = _name;
+    ui->lineEdit->setText(nameGetter());
+//    ui->lineEdit->setText(name);
+}
+
+QString FooWidget::nameGetter(){
+    return name;
 }
