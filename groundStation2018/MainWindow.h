@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+#include "Plot.h"
+#include "RenderArea.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,7 +20,11 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QWidget *some_widget;
+    RenderArea *some_widget;
+
+    // plot object
+    Plot *m_plot;
+
 };
 
 #endif // MAINWINDOW_H

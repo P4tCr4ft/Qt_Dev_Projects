@@ -10,7 +10,6 @@
 #include <qpen.h>
 #include <qwt_series_data.h>
 #include <qwt_symbol.h>
-#include <qwt_symbol.h>
 #include <qwt_legend.h>
 #include <qwt_polar_marker.h>
 #include <qwt_scale_engine.h>
@@ -38,6 +37,7 @@ public slots:
 private:
     QwtPolarGrid *m_grid;
 //    QwtPolarCurve *m_curve[PlotSettings::NumCurves];
+    QwtPolarMarker *m_marker;
 };
 
 #endif // PLOT_H

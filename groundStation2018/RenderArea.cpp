@@ -2,9 +2,10 @@
 #include <QPaintEvent>
 #include <QPainter>
 
-RenderArea::RenderArea(QWidget *parent) :
+RenderArea::RenderArea(QWidget *parent, QColor backgroundColor) :
     QWidget(parent),
-    mBackgroundColor(0, 0, 255)
+    mBackgroundColor(backgroundColor)
+//    mBackgroundColor(0, 0, 255)
 
 {
 

@@ -7,7 +7,8 @@ class RenderArea : public QWidget
 {
     Q_OBJECT
 public:
-    explicit RenderArea(QWidget *parent = nullptr);
+//    explicit RenderArea(QWidget *parent = nullptr, QColor backgroundColor = nullptr);
+    explicit RenderArea(QWidget *parent = nullptr, QColor backgroundColor = QColor(0, 0, 100));
 
     QSize sizeHint() const Q_DECL_OVERRIDE;
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
